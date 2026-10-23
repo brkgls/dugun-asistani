@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Banner, Button, Modal, ModalHeader, TextField, Textarea } from "../../shared/components";
 import { useResolveError } from "../../shared/errors";
-import { useT } from "../../shared/i18n/I18nProvider";
+import { useT } from "../../shared/i18n/i18nContext";
 import { ServicesIcon } from "../../shared/icons";
 import { cn } from "../../shared/utils/cn";
 import type { Hall, Menu } from "../../shared/types";

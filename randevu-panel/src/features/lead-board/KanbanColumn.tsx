@@ -1,6 +1,6 @@
 import { useDroppable } from "@dnd-kit/core";
 import { Badge } from "../../shared/components";
-import { useT } from "../../shared/i18n/I18nProvider";
+import { useT } from "../../shared/i18n/i18nContext";
 import { cn } from "../../shared/utils/cn";
 import type { Lead, LeadStage } from "../../shared/types";
 import { STAGE_TONE } from "./stageTheme";

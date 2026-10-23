@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { Badge, SelectField, TextField } from "../../shared/components";
-import { useT } from "../../shared/i18n/I18nProvider";
+import { useT } from "../../shared/i18n/i18nContext";
 import { ChevronRightIcon, PersonalIcon, SearchIcon } from "../../shared/icons";
 import { TONES } from "../../shared/theme/tones";
 import { STAGE_TONE, MOOD_TONE } from "./stageTheme";

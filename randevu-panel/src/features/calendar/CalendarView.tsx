@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useCalendar } from "./useCalendar";
 import { DayDetailModal } from "./DayDetailModal";
 import { Banner, Button, IconButton, PageHeader, Skeleton } from "../../shared/components";
-import { useT } from "../../shared/i18n/I18nProvider";
+import { useT } from "../../shared/i18n/i18nContext";
 import { ChevronLeftIcon, ChevronRightIcon } from "../../shared/icons";
 import { cn } from "../../shared/utils/cn";
 import { NO_MENU_COLOR } from "./calendarColors";

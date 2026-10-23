@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAllTenants } from "../../api/tenants";
-import { useT } from "../../shared/i18n/I18nProvider";
+import { useT } from "../../shared/i18n/i18nContext";
 import { Badge, Button, Card, EmptyState, Skeleton } from "../../shared/components";
 import { HomeIcon } from "../../shared/icons";
 import type { TenantSettings } from "../../shared/types";

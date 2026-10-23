@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { LoginPage } from "./auth/LoginPage";
-import { useAuth } from "./auth/AuthContext";
+import { useAuth } from "./auth/useAuth";
 import { Dashboard } from "./layout/Dashboard";
 import type { ViewMode } from "./layout/navigation";
 import { LeadBoardView } from "./features/lead-board/LeadBoardView";
@@ -12,7 +12,7 @@ import { UserManagement } from "./features/user-management/UserManagement";
 import { SettingsView } from "./features/settings/SettingsView";
 import { ChangePassword } from "./features/profile/ChangePassword";
 import { SuperAdminPanel } from "./features/super-admin-panel/SuperAdminPanel";
-import { useT } from "./shared/i18n/I18nProvider";
+import { useT } from "./shared/i18n/i18nContext";
 import { BackButton } from "./shared/components";
 
 function App() {

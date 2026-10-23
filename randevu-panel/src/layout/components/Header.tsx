@@ -1,4 +1,4 @@
-import { useT } from "../../shared/i18n/I18nProvider";
+import { useT } from "../../shared/i18n/i18nContext";
 import { NavMenu } from "./NavMenu";
 import type { ViewMode } from "../navigation";
 

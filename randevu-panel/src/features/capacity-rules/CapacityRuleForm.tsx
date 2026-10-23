@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Banner, Button, Modal, ModalHeader, SegmentedControl, SelectField, Textarea, Switch } from "../../shared/components";
 import { useResolveError } from "../../shared/errors";
-import { useT } from "../../shared/i18n/I18nProvider";
+import { useT } from "../../shared/i18n/i18nContext";
 import { ClockIcon } from "../../shared/icons";
 import { cn } from "../../shared/utils/cn";
 import type { CapacityRule, Hall, Menu, TimeSlot } from "../../shared/types";

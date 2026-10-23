@@ -11,7 +11,7 @@ import { STAGE_TONE } from "./stageTheme";
 import { getHalls } from "../../api/halls";
 import { getMenus } from "../../api/menus";
 import { Banner, Button, PageHeader, SegmentedControl, SelectField, Skeleton } from "../../shared/components";
-import { useT } from "../../shared/i18n/I18nProvider";
+import { useT } from "../../shared/i18n/i18nContext";
 import { PlusIcon } from "../../shared/icons";
 import { cn } from "../../shared/utils/cn";
 import { TONES } from "../../shared/theme/tones";

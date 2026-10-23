@@ -68,8 +68,6 @@ jobs:
           cache-dependency-path: randevu-panel/package-lock.json
       - run: npm ci
       - name: Lint
-        # Ilk asamada bilgi amacli; mevcut lint hatalari temizlenince zorunlu yap.
-        continue-on-error: true
         run: npm run lint
       - name: Build
         run: npm run build

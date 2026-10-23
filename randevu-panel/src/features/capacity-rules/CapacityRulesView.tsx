@@ -4,7 +4,7 @@ import { CapacityRuleForm } from "./CapacityRuleForm";
 import { getHalls } from "../../api/halls";
 import { getMenus } from "../../api/menus";
 import { Banner, Badge, Button, Card, EmptyState, PageHeader, Skeleton } from "../../shared/components";
-import { useT } from "../../shared/i18n/I18nProvider";
+import { useT } from "../../shared/i18n/i18nContext";
 import { ClockIcon, PlusIcon, TrashIcon } from "../../shared/icons";
 import type { CapacityRule, Hall, Menu } from "../../shared/types";
 

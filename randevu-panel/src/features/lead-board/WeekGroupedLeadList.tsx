@@ -1,4 +1,4 @@
-import { useT } from "../../shared/i18n/I18nProvider";
+import { useT } from "../../shared/i18n/i18nContext";
 import type { Lead } from "../../shared/types";
 import { LeadCard } from "./LeadCard";
 import { weeksAgo, type WeekGroup } from "./leadFilters";

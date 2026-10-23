@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useHalls } from "./useHalls";
 import { HallForm } from "./HallForm";
 import { Banner, Badge, Button, Card, EmptyState, PageHeader, Skeleton } from "../../shared/components";
-import { useT } from "../../shared/i18n/I18nProvider";
+import { useT } from "../../shared/i18n/i18nContext";
 import { PlusIcon, ServicesIcon } from "../../shared/icons";
 import type { Hall } from "../../shared/types";
 
