@@ -1,0 +1,27 @@
+name: AI görevi
+description: Agent'ın üstleneceği bir geliştirme görevi (açılınca agent otomatik başlar)
+title: "[AI] "
+labels: ["ai-task"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: Ne yapılsın?
+      description: Kullanıcı açısından istenen davranış. Kısa ve net yaz.
+      placeholder: Müşteri randevuyu iptal edince işletme sahibine push bildirimi gitsin.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Kabul kriterleri
+      description: Ne olursa iş bitmiş sayılır?
+      placeholder: |
+        - İptal sonrası panel kullanıcılarına bildirim gider
+        - Bildirim metninde müşteri adı ve saat var
+        - Birim testi var
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notlar
+      description: Dokunulmaması gereken yerler, ipuçları, ilgili dosyalar (opsiyonel).
