@@ -1,6 +1,6 @@
 // Self-contained dropdown nav: owns its own open/close state plus outside-click and Escape handling.
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { useT } from "../../shared/i18n/I18nProvider";
+import { useT } from "../../shared/i18n/i18nContext";
 import { cn } from "../../shared/utils/cn";
 import {
   BellIcon, BellOffIcon, CalendarIcon, ChevronDownIcon, ClockIcon, HomeIcon, LockIcon, LogoutIcon,

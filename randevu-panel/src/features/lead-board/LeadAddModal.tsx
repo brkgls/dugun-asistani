@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Banner, Button, Modal, ModalHeader, SegmentedControl, SelectField, TextField } from "../../shared/components";
 import { useResolveError } from "../../shared/errors";
-import { useT } from "../../shared/i18n/I18nProvider";
+import { useT } from "../../shared/i18n/i18nContext";
 import { CalendarIcon, PersonalIcon, PhoneIcon, PlusIcon } from "../../shared/icons";
 import type { Hall, Menu, TimeSlot } from "../../shared/types";
 import type { createLead } from "../../api/leads";

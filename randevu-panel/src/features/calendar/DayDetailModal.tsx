@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Badge, Button, Modal, ModalHeader } from "../../shared/components";
-import { useT } from "../../shared/i18n/I18nProvider";
+import { useT } from "../../shared/i18n/i18nContext";
 import { LeadDetailModal } from "../lead-board/LeadDetailModal";
 import { LeadAddModal } from "../lead-board/LeadAddModal";
 import { CalendarIcon, ChevronRightIcon, PersonalIcon, PlusIcon } from "../../shared/icons";

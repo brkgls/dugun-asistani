@@ -3,7 +3,7 @@ import { useMenus } from "./useMenus";
 import { MenuForm } from "./MenuForm";
 import { getHalls } from "../../api/halls";
 import { Banner, Badge, Button, Card, EmptyState, PageHeader, Skeleton } from "../../shared/components";
-import { useT } from "../../shared/i18n/I18nProvider";
+import { useT } from "../../shared/i18n/i18nContext";
 import { PlusIcon, ServicesIcon } from "../../shared/icons";
 import type { Hall, Menu } from "../../shared/types";
 

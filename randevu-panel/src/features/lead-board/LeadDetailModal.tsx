@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Badge, Banner, Button, Modal, ModalHeader, SegmentedControl, SelectField, TextField, Textarea, useToast } from "../../shared/components";
 import { useResolveError } from "../../shared/errors";
-import { useT } from "../../shared/i18n/I18nProvider";
+import { useT } from "../../shared/i18n/i18nContext";
 import { CalendarIcon, NoteIcon, PersonalIcon, PhoneIcon } from "../../shared/icons";
 import { getLeadNotes, addLeadNote } from "../../api/leadNotes";
 import { getUsers } from "../../api/users";
-import { useAuth } from "../../auth/AuthContext";
+import { useAuth } from "../../auth/useAuth";
 import { cn } from "../../shared/utils/cn";
 import { TONES } from "../../shared/theme/tones";
 import type { Hall, Lead, LeadMood, LeadNote, LeadStage, Menu, PanelUser, TimeSlot } from "../../shared/types";

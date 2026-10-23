@@ -1,6 +1,6 @@
 import { useDraggable } from "@dnd-kit/core";
 import { Badge, Card } from "../../shared/components";
-import { useT } from "../../shared/i18n/I18nProvider";
+import { useT } from "../../shared/i18n/i18nContext";
 import { cn } from "../../shared/utils/cn";
 import type { Lead } from "../../shared/types";
 import { MOOD_TONE } from "./stageTheme";

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { login } from "../api/auth";
-import { useAuth } from "./AuthContext";
-import { useT } from "../shared/i18n/I18nProvider";
+import { useAuth } from "./useAuth";
+import { useT } from "../shared/i18n/i18nContext";
 import { Banner, Button, Card, TextField } from "../shared/components";
 import { ApiError } from "../shared/errors/ApiError";
 

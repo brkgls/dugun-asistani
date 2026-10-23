@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { changePassword } from "../../api/users";
 import { useResolveError } from "../../shared/errors";
-import { useT } from "../../shared/i18n/I18nProvider";
+import { useT } from "../../shared/i18n/i18nContext";
 import { Banner, Button, TextField } from "../../shared/components";
 
 export function ChangePassword() {

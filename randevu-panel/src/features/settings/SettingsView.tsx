@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getSettings, updateSettings } from "../../api/settings";
 import { useResolveError } from "../../shared/errors";
-import { useT } from "../../shared/i18n/I18nProvider";
+import { useT } from "../../shared/i18n/i18nContext";
 import { Banner, Button, Skeleton, Switch, TextField, Textarea } from "../../shared/components";
 import type { TenantSettings } from "../../shared/types";
 
