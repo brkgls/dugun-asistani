@@ -132,6 +132,7 @@ export const en: Translations = {
       callButton: "Call",
       whatsappButton: "WhatsApp",
       noPhone: "No phone",
+      saveSuccess: "Saved.",
     },
     addModal: {
       title: "Add Lead",

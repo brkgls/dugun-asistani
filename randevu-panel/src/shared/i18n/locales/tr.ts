@@ -138,6 +138,7 @@ export const tr = {
       callButton: "Ara",
       whatsappButton: "WhatsApp",
       noPhone: "Telefon yok",
+      saveSuccess: "Kaydedildi.",
     },
     addModal: {
       title: "Talep Ekle",

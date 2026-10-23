@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Badge, Banner, Button, Modal, ModalHeader, SegmentedControl, SelectField, TextField, Textarea } from "../../shared/components";
+import { Badge, Banner, Button, Modal, ModalHeader, SegmentedControl, SelectField, TextField, Textarea, useToast } from "../../shared/components";
 import { useResolveError } from "../../shared/errors";
 import { useT } from "../../shared/i18n/I18nProvider";
 import { CalendarIcon, NoteIcon, PersonalIcon, PhoneIcon } from "../../shared/icons";
@@ -27,6 +27,7 @@ export function LeadDetailModal({ lead, halls, menus, onClose, onSave }: LeadDet
   const { t } = useT();
   const resolve = useResolveError();
   const { isAdmin } = useAuth();
+  const showToast = useToast();
 
   const [hallId, setHallId] = useState(lead.hallId ?? "");
   const [menuId, setMenuId] = useState(lead.menuId ?? "");
@@ -56,8 +57,7 @@ export function LeadDetailModal({ lead, halls, menus, onClose, onSave }: LeadDet
   const [addingNote, setAddingNote] = useState(false);
 
   const [saving, setSaving] = useState(false);
-  const [msg, setMsg] = useState("");
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
   useEffect(() => {
     getLeadNotes(lead.id).then(setNotes).catch(() => setNotes([]));
@@ -66,7 +66,7 @@ export function LeadDetailModal({ lead, halls, menus, onClose, onSave }: LeadDet
 
   async function handleSave() {
     setSaving(true);
-    setMsg("");
+    setErrorMsg("");
     try {
       await onSave({
         hallId: hallId || null,
@@ -84,12 +84,10 @@ export function LeadDetailModal({ lead, halls, menus, onClose, onSave }: LeadDet
       if (newNote.trim()) {
         await addNote();
       }
-      setIsSuccess(true);
-      setMsg(t((l) => l.settings.saveSuccess));
+      showToast(t((l) => l.leadBoard.detail.saveSuccess));
+      onClose();
     } catch (err) {
-      setIsSuccess(false);
-      setMsg(resolve(err));
-    } finally {
+      setErrorMsg(resolve(err));
       setSaving(false);
     }
   }
@@ -112,7 +110,7 @@ export function LeadDetailModal({ lead, halls, menus, onClose, onSave }: LeadDet
       className="sm:max-w-[480px]"
       footer={
         <>
-          {msg && <Banner variant={isSuccess ? "success" : "error"} className="mb-3">{msg}</Banner>}
+          {errorMsg && <Banner variant="error" className="mb-3">{errorMsg}</Banner>}
           <div className="flex gap-2">
             <Button variant="secondary" onClick={onClose}>{t((l) => l.common.cancel)}</Button>
             <Button fullWidth isLoading={saving || addingNote} onClick={handleSave}>
