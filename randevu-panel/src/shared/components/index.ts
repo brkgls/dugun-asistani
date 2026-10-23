@@ -18,4 +18,5 @@ export { CollapsibleSection } from "./CollapsibleSection";
 export { PageHeader } from "./PageHeader";
 export { BackButton } from "./BackButton";
 export { Switch } from "./Switch";
-export { ToastProvider, useToast } from "./Toast";
+export { ToastProvider } from "./Toast";
+export { useToast } from "./toastContext";
